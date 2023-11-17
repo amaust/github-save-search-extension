@@ -1,0 +1,23 @@
+{
+    "manifest_version": 3,
+    "name": "Github Save Search",
+    "description": "Saves tags and filters for searching github issues.",
+    "version": "0.1",
+    "action": {
+      "default_popup": "popup/popup.html"
+    },
+    "content_scripts": [
+        {
+            "matches": [
+                "https://github.com/*"
+            ],
+            "js": ["scripts/content.js"]
+        }
+    ],
+    "permissions": [
+        "storage"
+    ],
+    "background": {
+        "service_worker": "background.js"
+    }  
+  }
